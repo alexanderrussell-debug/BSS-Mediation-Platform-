@@ -1,0 +1,4 @@
+# ums user crontab (ossmed01)
+0 2 * * *    cp /data/bss_extract/SUBSCRIBER_EXTRACT_$(date +\%Y\%m\%d).csv /opt/ums/refdata/subscribers.csv
+30 2 * * *   /opt/ums/bin/ums.sh stop; /opt/ums/bin/ums.sh start
+*/10 * * * * /opt/ums/bin/legacy/smsc_pull.pl >> /opt/ums/logs/smsc_pull.log 2>&1

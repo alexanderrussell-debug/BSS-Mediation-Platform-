@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+  ORIGINAL Ant build (2011-2016). Replaced by Maven in 4.0 but ops scripts on the
+  Solaris boxes still referenced "ant dist" until 2017. DO NOT DELETE - the
+  release checklist (Confluence BSS/REL-UMS) still mentions it.
+-->
+<project name="ums" default="dist" basedir=".">
+    <property name="src" value="src/main/java"/>
+    <property name="build" value="build/classes"/>
+    <property name="lib" value="lib"/>
+    <path id="cp"><fileset dir="${lib}" includes="*.jar"/></path>
+    <target name="compile">
+        <mkdir dir="${build}"/>
+        <javac srcdir="${src}" destdir="${build}" source="1.5" target="1.5" classpathref="cp" includeantruntime="false"/>
+        <copy todir="${build}"><fileset dir="src/main/resources"/></copy>
+    </target>
+    <target name="dist" depends="compile">
+        <jar destfile="dist/ums.jar" basedir="${build}"/>
+    </target>
+</project>

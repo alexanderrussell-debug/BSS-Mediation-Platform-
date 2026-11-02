@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  UMS wiring. Spring 3.2 XML (no annotations - team standard since 2011).
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- conf/ums.properties on the server overrides the one in the jar -->
+    <bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:ums.properties</value>
+                <value>file:conf/ums.properties</value>
+            </list>
+        </property>
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+    </bean>
+
+    <!-- same files again as a Properties object, for the dynamic stream.* keys -->
+    <bean id="umsProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list>
+                <value>classpath:ums.properties</value>
+                <value>file:conf/ums.properties</value>
+            </list>
+        </property>
+        <property name="ignoreResourceNotFound" value="true"/>
+    </bean>
+
+    <!-- ===================== reference data ===================== -->
+    <bean id="subscriberCache" class="com.meridiantel.bss.ums.reference.SubscriberCache" init-method="load">
+        <property name="file" value="${ums.ref.subscribers}"/>
+    </bean>
+    <bean id="ratingZoneTable" class="com.meridiantel.bss.ums.reference.RatingZoneTable" init-method="load">
+        <property name="file" value="${ums.ref.ratingZones}"/>
+    </bean>
+    <bean id="roamingPartnerTable" class="com.meridiantel.bss.ums.reference.RoamingPartnerTable" init-method="load">
+        <property name="file" value="${ums.ref.roamingPartners}"/>
+    </bean>
+
+    <!-- ===================== processing chain ===================== -->
+    <bean id="collectorFactory" class="com.meridiantel.bss.ums.collect.CollectorFactory"/>
+    <bean id="decoderFactory" class="com.meridiantel.bss.ums.decode.DecoderFactory"/>
+    <bean id="validator" class="com.meridiantel.bss.ums.process.RecordValidator"/>
+    <bean id="normalizer" class="com.meridiantel.bss.ums.process.RecordNormalizer"/>
+
+    <bean id="duplicateChecker" class="com.meridiantel.bss.ums.process.DuplicateChecker" init-method="load" destroy-method="save">
+        <property name="stateFile" value="${ums.dataDir}/state/dedup.ser"/>
+    </bean>
+    <bean id="aggregator" class="com.meridiantel.bss.ums.process.PartialCdrAggregator" init-method="load" destroy-method="save">
+        <property name="stateFile" value="${ums.dataDir}/state/pending.ser"/>
+    </bean>
+
+    <bean id="enricher" class="com.meridiantel.bss.ums.process.RecordEnricher">
+        <property name="subscriberCache" ref="subscriberCache"/>
+        <property name="ratingZoneTable" ref="ratingZoneTable"/>
+        <property name="roamingPartnerTable" ref="roamingPartnerTable"/>
+        <property name="peakStartHour" value="${ums.tariff.peakStart}"/>
+        <property name="peakEndHour" value="${ums.tariff.peakEnd}"/>
+    </bean>
+    <bean id="filter" class="com.meridiantel.bss.ums.process.RecordFilter">
+        <property name="testMsisdns" value="${ums.filter.testMsisdns}"/>
+    </bean>
+    <bean id="fraudRule" class="com.meridiantel.bss.ums.process.FraudRule"/>
+
+    <bean id="auditLogger" class="com.meridiantel.bss.ums.audit.AuditLogger">
+        <property name="auditDir" value="${ums.dataDir}/audit"/>
+    </bean>
+
+    <bean id="streamProcessor" class="com.meridiantel.bss.ums.engine.StreamProcessor">
+        <property name="dataDir" value="${ums.dataDir}"/>
+        <property name="archiveEnabled" value="${ums.archive.enabled}"/>
+        <property name="collectorFactory" ref="collectorFactory"/>
+        <property name="decoderFactory" ref="decoderFactory"/>
+        <property name="validator" ref="validator"/>
+        <property name="normalizer" ref="normalizer"/>
+        <property name="duplicateChecker" ref="duplicateChecker"/>
+        <property name="aggregator" ref="aggregator"/>
+        <property name="enricher" ref="enricher"/>
+        <property name="filter" ref="filter"/>
+        <property name="fraudRule" ref="fraudRule"/>
+        <property name="auditLogger" ref="auditLogger"/>
+    </bean>
+
+    <bean id="streamConfigLoader" class="com.meridiantel.bss.ums.core.StreamConfigLoader">
+        <property name="properties" ref="umsProperties"/>
+        <property name="dataDir" value="${ums.dataDir}"/>
+    </bean>
+
+    <bean id="mediationEngine" class="com.meridiantel.bss.ums.engine.MediationEngine">
+        <property name="streamConfigLoader" ref="streamConfigLoader"/>
+        <property name="streamProcessor" ref="streamProcessor"/>
+    </bean>
+
+    <!-- ===================== Quartz 1.x schedule ===================== -->
+    <bean id="mediationJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="mediationEngine"/>
+        <property name="targetMethod" value="runAll"/>
+        <property name="concurrent" value="false"/>
+    </bean>
+
+    <bean id="mediationTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="mediationJob"/>
+        <property name="cronExpression" value="${ums.schedule.cron}"/>
+    </bean>
+
+    <bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list><ref bean="mediationTrigger"/></list>
+        </property>
+        <property name="autoStartup" value="${ums.scheduler.autoStart}"/>
+    </bean>
+</beans>

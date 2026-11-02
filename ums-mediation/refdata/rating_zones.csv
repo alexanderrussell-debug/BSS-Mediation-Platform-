@@ -1,0 +1,34 @@
+# Rating zones - maintained by BSS Config (owner: billing-config@meridiantel.example)
+# 2012-03 initial (country level)
+# 2019-04 added SG mobile/premium/toll-free splits for new IDD+local tariff (CR-2231)
+PREFIX,ZONE,DESCRIPTION
+65,SG_LOCAL,Singapore fixed
+658,SG_MOBILE,Singapore mobile
+659,SG_MOBILE,Singapore mobile
+651800,SG_TOLLFREE,Singapore toll free 1800
+651900,SG_PREMIUM,Singapore premium rate 1900
+60,INTL_ASEAN,Malaysia
+62,INTL_ASEAN,Indonesia
+63,INTL_ASEAN,Philippines
+66,INTL_ASEAN,Thailand
+84,INTL_ASEAN,Vietnam
+673,INTL_ASEAN,Brunei
+855,INTL_ASEAN,Cambodia
+856,INTL_ASEAN,Laos
+95,INTL_ASEAN,Myanmar
+82,INTL_ASIA,South Korea
+81,INTL_ASIA,Japan
+86,INTL_ASIA,China
+852,INTL_ASIA,Hong Kong
+886,INTL_ASIA,Taiwan
+91,INTL_ASIA,India
+61,INTL_ANZ,Australia
+64,INTL_ANZ,New Zealand
+44,INTL_EU,United Kingdom
+49,INTL_EU,Germany
+33,INTL_EU,France
+1,INTL_NA,USA/Canada
+881,INTL_SATELLITE,Global mobile satellite
+882,INTL_SATELLITE,International networks
+971,INTL_ROW,UAE
+234,INTL_ROW,Nigeria

@@ -1,0 +1,32 @@
+UMS - release history
+=====================
+
+5.2.x (current, maintenance only)
+  - Dockerfile for dev/demo
+  - Fraud thresholds externalised (not actually wired - see FraudRule)
+
+5.0 (2022-08)
+  - PGW CSV export replaces the old GGSN binary format
+  - Roaming partner table
+
+4.3 (2019-04)
+  - CR-2231: rating zone splits for SG mobile / premium / toll-free (refdata only)
+
+4.0 (2017-10)
+  - Migrated from Solaris/SPARC to RHEL 6
+  - Maven build replaces Ant (build.xml kept for reference)
+
+3.2 (2016-03)
+  - Indonesia: MSC_ID stream (Jakarta + Makassar switches)
+  - MsisdnUtil copied from NetProv OSS
+
+3.0 (2014-06)
+  - Partial CDR aggregation for GGSN
+  - Duplicate checker persisted to disk
+
+2.0 (2013-02)
+  - Format cache in DateUtil (UMS-188, CPU on SPARC)
+  - Quartz scheduling replaces cron + run-once
+
+1.0 (2011-09)
+  - Initial go-live Singapore: MSC BER + SMSC, BillCore UDR v1
