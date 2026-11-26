@@ -1,0 +1,1 @@
+java.version=1.7.0_80 threads=4 parsesPerThread=200000 wrongTimezone(+/-1h)=53229 garbageDate=62370 exceptions=205497
