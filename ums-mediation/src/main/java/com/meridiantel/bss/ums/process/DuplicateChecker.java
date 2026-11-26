@@ -1,12 +1,6 @@
 package com.meridiantel.bss.ums.process;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.util.HashSet;
 
 import org.apache.log4j.Logger;
@@ -16,7 +10,7 @@ import com.meridiantel.bss.ums.core.UsageRecord;
 
 /**
  * Duplicate detection across all streams. Keys are kept in memory and saved to
- * state/dedup.ser after each file.
+ * state/dedup.ser after each file. An existing dedup.ser that cannot be read stops startup (see StateFiles).
  *
  * TODO purge keys older than 90 days (UMS-355). Heap is 6 GB now because of this.
  */
@@ -34,23 +28,20 @@ public class DuplicateChecker {
             return;
         }
         try {
-            ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(new FileInputStream(f)));
-            keys = (HashSet) in.readObject();
-            in.close();
+            keys = (HashSet) StateFiles.read(f);
+            if (keys == null) {
+                throw new IllegalStateException("file contains null");
+            }
             log.info("Loaded " + keys.size() + " dedup keys");
         } catch (Exception e) {
-            log.error("Could not read dedup state, STARTING EMPTY", e);
             keys = new HashSet();
+            StateFiles.handleLoadFailure(log, f, "dedup", e);
         }
     }
 
     public synchronized void save() {
         try {
-            File f = new File(stateFile);
-            f.getParentFile().mkdirs();
-            ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(f)));
-            out.writeObject(keys);
-            out.close();
+            StateFiles.writeAtomically(new File(stateFile), keys);
         } catch (Exception e) {
             log.error("Could not save dedup state", e);
         }
