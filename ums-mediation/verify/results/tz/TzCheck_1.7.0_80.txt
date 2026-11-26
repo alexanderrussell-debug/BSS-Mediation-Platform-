@@ -1,0 +1,160 @@
+# java.version=1.7.0_80
+# java.vendor=Azul Systems, Inc.
+# tzdata=2015a (ZoneInfoMappings)
+
+== Asia/Jakarta resolvedId=Asia/Jakarta rawOffset=+07:00 useDaylightTime=false short=WIB long=West Indonesia Time
+  1900-01-01 00:00Z start offset +07:07:12
+  1923-12-31 16:40Z +07:07:12 -> +07:20
+  1932-10-31 16:40Z +07:20 -> +07:30
+  1942-03-22 16:30Z +07:30 -> +09:00
+  1945-09-22 15:00Z +09:00 -> +07:30
+  1948-04-30 16:30Z +07:30 -> +08:00
+  1950-04-30 16:00Z +08:00 -> +07:30
+  1963-12-31 16:30Z +07:30 -> +07:00
+
+== Asia/Makassar resolvedId=Asia/Makassar rawOffset=+08:00 useDaylightTime=false short=WITA long=Central Indonesia Time
+  1900-01-01 00:00Z start offset +07:57:36
+  1932-10-31 16:02Z +07:57:36 -> +08:00
+  1942-02-08 16:00Z +08:00 -> +09:00
+  1945-09-22 15:00Z +09:00 -> +08:00
+
+== Asia/Ujung_Pandang resolvedId=Asia/Ujung_Pandang rawOffset=+08:00 useDaylightTime=false short=WITA long=Central Indonesia Time
+  1900-01-01 00:00Z start offset +07:57:36
+  1932-10-31 16:02Z +07:57:36 -> +08:00
+  1942-02-08 16:00Z +08:00 -> +09:00
+  1945-09-22 15:00Z +09:00 -> +08:00
+
+== Asia/Pontianak resolvedId=Asia/Pontianak rawOffset=+07:00 useDaylightTime=false short=WIB long=West Indonesia Time
+  1900-01-01 00:00Z start offset +07:17:20
+  1932-10-31 16:43Z +07:17:20 -> +07:30
+  1942-01-28 16:30Z +07:30 -> +09:00
+  1945-09-22 15:00Z +09:00 -> +07:30
+  1948-04-30 16:30Z +07:30 -> +08:00
+  1950-04-30 16:00Z +08:00 -> +07:30
+  1963-12-31 16:30Z +07:30 -> +08:00
+  1987-12-31 16:00Z +08:00 -> +07:00
+
+== Asia/Jayapura resolvedId=Asia/Jayapura rawOffset=+09:00 useDaylightTime=false short=WIT long=East Indonesia Time
+  1900-01-01 00:00Z start offset +09:22:48
+  1932-10-31 14:37Z +09:22:48 -> +09:00
+  1944-08-31 15:00Z +09:00 -> +09:30
+  1963-12-31 14:30Z +09:30 -> +09:00
+
+== Asia/Singapore resolvedId=Asia/Singapore rawOffset=+08:00 useDaylightTime=false short=SGT long=Singapore Time
+  1900-01-01 00:00Z start offset +06:55:25
+  1905-05-31 17:05Z +06:55:25 -> +07:00
+  1932-12-31 17:00Z +07:00 -> +07:20
+  1941-08-31 16:40Z +07:20 -> +07:30
+  1942-02-15 16:30Z +07:30 -> +09:00
+  1945-09-11 15:00Z +09:00 -> +07:30
+  1981-12-31 16:30Z +07:30 -> +08:00
+
+== Asia/Kuala_Lumpur resolvedId=Asia/Kuala_Lumpur rawOffset=+08:00 useDaylightTime=false short=MYT long=Malaysia Time
+  1900-01-01 00:00Z start offset +06:46:46
+  1900-12-31 17:13Z +06:46:46 -> +06:55:25
+  1905-05-31 17:05Z +06:55:25 -> +07:00
+  1932-12-31 17:00Z +07:00 -> +07:20
+  1941-08-31 16:40Z +07:20 -> +07:30
+  1942-02-15 16:30Z +07:30 -> +09:00
+  1945-09-11 15:00Z +09:00 -> +07:30
+  1981-12-31 16:30Z +07:30 -> +08:00
+
+== Asia/Manila resolvedId=Asia/Manila rawOffset=+08:00 useDaylightTime=false short=PHT long=Philippines Time
+  1900-01-01 00:00Z start offset +08:00
+  1936-10-31 16:00Z +08:00 -> +09:00
+  1937-01-31 15:00Z +09:00 -> +08:00
+  1942-04-30 16:00Z +08:00 -> +09:00
+  1944-10-31 15:00Z +09:00 -> +08:00
+  1954-04-11 16:00Z +08:00 -> +09:00
+  1954-06-30 15:00Z +09:00 -> +08:00
+  1978-03-21 16:00Z +08:00 -> +09:00
+  1978-09-20 15:00Z +09:00 -> +08:00
+
+== UTC resolvedId=UTC rawOffset=+00:00 useDaylightTime=false short=UTC long=Coordinated Universal Time
+  1900-01-01 00:00Z start offset +00:00
+
+== offsets at CDR-relevant instants (UTC noon on the 1st of each quarter 2010..2030)
+2010-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2010-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2010-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2010-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2011-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2011-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2011-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2011-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2012-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2012-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2012-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2012-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2013-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2013-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2013-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2013-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2014-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2014-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2014-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2014-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2015-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2015-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2015-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2015-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2016-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2016-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2016-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2016-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2017-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2017-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2017-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2017-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2018-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2018-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2018-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2018-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2019-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2019-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2019-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2019-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2020-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2020-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2020-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2020-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2021-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2021-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2021-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2021-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2022-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2022-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2022-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2022-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2023-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2023-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2023-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2023-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2024-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2024-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2024-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2024-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2025-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2025-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2025-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2025-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2026-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2026-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2026-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2026-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2027-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2027-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2027-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2027-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2028-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2028-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2028-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2028-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2029-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2029-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2029-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2029-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2030-01-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2030-04-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2030-07-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00
+2030-10-01 12:00Z Asia/Jakarta=+07:00 Asia/Makassar=+08:00 Asia/Ujung_Pandang=+08:00 Asia/Pontianak=+07:00 Asia/Jayapura=+09:00 Asia/Singapore=+08:00 Asia/Kuala_Lumpur=+08:00 Asia/Manila=+08:00 UTC=+00:00

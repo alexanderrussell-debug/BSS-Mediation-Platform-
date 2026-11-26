@@ -1,0 +1,69 @@
+===== TzCheck: 1.7.0_80 vs 21.0.13.1
+1,3c1,3
+< # java.version=1.7.0_80
+< # java.vendor=Azul Systems, Inc.
+< # tzdata=2015a (ZoneInfoMappings)
+---
+> # java.version=21.0.13.1
+> # java.vendor=Eclipse Adoptium
+> # tzdata=2026f (tzdb.dat)
+5c5
+< == Asia/Jakarta resolvedId=Asia/Jakarta rawOffset=+07:00 useDaylightTime=false short=WIB long=West Indonesia Time
+---
+> == Asia/Jakarta resolvedId=Asia/Jakarta rawOffset=+07:00 useDaylightTime=false short=WIB long=Western Indonesia Time
+27c27
+< == Asia/Pontianak resolvedId=Asia/Pontianak rawOffset=+07:00 useDaylightTime=false short=WIB long=West Indonesia Time
+---
+> == Asia/Pontianak resolvedId=Asia/Pontianak rawOffset=+07:00 useDaylightTime=false short=WIB long=Western Indonesia Time
+37c37
+< == Asia/Jayapura resolvedId=Asia/Jayapura rawOffset=+09:00 useDaylightTime=false short=WIT long=East Indonesia Time
+---
+> == Asia/Jayapura resolvedId=Asia/Jayapura rawOffset=+09:00 useDaylightTime=false short=WIT long=Eastern Indonesia Time
+43c43
+< == Asia/Singapore resolvedId=Asia/Singapore rawOffset=+08:00 useDaylightTime=false short=SGT long=Singapore Time
+---
+> == Asia/Singapore resolvedId=Asia/Singapore rawOffset=+08:00 useDaylightTime=false short=SGT long=Singapore Standard Time
+50c50
+<   1981-12-31 16:30Z +07:30 -> +08:00
+---
+>   1981-12-31 16:00Z +07:30 -> +08:00
+53,54c53
+<   1900-01-01 00:00Z start offset +06:46:46
+<   1900-12-31 17:13Z +06:46:46 -> +06:55:25
+---
+>   1900-01-01 00:00Z start offset +06:55:25
+60c59
+<   1981-12-31 16:30Z +07:30 -> +08:00
+---
+>   1981-12-31 16:00Z +07:30 -> +08:00
+62c61
+< == Asia/Manila resolvedId=Asia/Manila rawOffset=+08:00 useDaylightTime=false short=PHT long=Philippines Time
+---
+> == Asia/Manila resolvedId=Asia/Manila rawOffset=+08:00 useDaylightTime=false short=PST long=Philippine Standard Time
+65,67c64,66
+<   1937-01-31 15:00Z +09:00 -> +08:00
+<   1942-04-30 16:00Z +08:00 -> +09:00
+<   1944-10-31 15:00Z +09:00 -> +08:00
+---
+>   1937-01-15 15:00Z +09:00 -> +08:00
+>   1941-12-15 16:00Z +08:00 -> +09:00
+>   1945-11-30 15:00Z +09:00 -> +08:00
+69,71c68,72
+<   1954-06-30 15:00Z +09:00 -> +08:00
+<   1978-03-21 16:00Z +08:00 -> +09:00
+<   1978-09-20 15:00Z +09:00 -> +08:00
+---
+>   1954-06-04 15:00Z +09:00 -> +08:00
+>   1977-03-27 16:00Z +08:00 -> +09:00
+>   1977-09-21 15:00Z +09:00 -> +08:00
+>   1990-05-20 16:00Z +08:00 -> +09:00
+>   1990-07-28 15:00Z +09:00 -> +08:00
+===== MscIdTzCheck: 1.7.0_80 vs 21.0.13.1
+1c1
+< # java.version=1.7.0_80 default.tz=Asia/Singapore file.encoding=ISO-8859-1
+---
+> # java.version=21.0.13.1 default.tz=Asia/Singapore file.encoding=ISO-8859-1
+===== DateUtilRaceCheck: 1.7.0_80 vs 21.0.13.1
+java.version=1.7.0_80 threads=4 parsesPerThread=200000 wrongTimezone(+/-1h)=53229 garbageDate=62370 exceptions=205497
+java.version=21.0.13.1 threads=4 parsesPerThread=200000 wrongTimezone(+/-1h)=71036 garbageDate=107711 exceptions=380266
+outputs in /tmp/ums-tz
