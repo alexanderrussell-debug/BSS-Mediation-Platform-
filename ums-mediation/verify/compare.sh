@@ -106,7 +106,10 @@ env -u JDK_JAVA_OPTIONS "$JDK/bin/javac" --release 8 -nowarn -d "$SERC" "$VERIFY
   || env -u JDK_JAVA_OPTIONS "$JDK/bin/javac" -nowarn -d "$SERC" "$VERIFY_DIR/java/SerCompare.java" >/dev/null 2>&1
 ROLLBACK_JDK=${ROLLBACK_JDK:-$TOOLS_DIR/zulu1.7.0_80-7.10.0.1-x86lx64}
 ROLLBACK_JAR=${ROLLBACK_JAR:-$TOOLS_DIR/ums-java7-baseline.jar}
-[ -f "$ROLLBACK_JAR" ] || ROLLBACK_JAR=$JAR
+if [ ! -f "$ROLLBACK_JAR" ]; then
+    echo "ERROR: rollback jar $ROLLBACK_JAR not found; run verify/make-baseline.sh (or pass --rollback-jar <Java 7 jar>)" >&2
+    exit 2
+fi
 SERC7=$WORK/serc7; mkdir -p "$SERC7"
 [ -x "$ROLLBACK_JDK/bin/javac" ] && env -u JDK_JAVA_OPTIONS "$ROLLBACK_JDK/bin/javac" -nowarn -d "$SERC7" "$VERIFY_DIR/java/SerCompare.java" >/dev/null 2>&1
 : > "$WORK/ser.txt"
