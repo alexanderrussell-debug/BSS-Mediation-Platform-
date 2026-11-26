@@ -1,0 +1,13 @@
+source.ref=main
+source.commit=4f18634fc023472240251b61727a68eaed7e9693
+build.jdk=OpenJDK Runtime Environment (Zulu 7.56.0.11-CA-linux64) (build 1.7.0_352-b01)
+run.jdk=OpenJDK Runtime Environment (Zulu 7.10.0.1-linux64) (build 1.7.0_80-b15)
+run.java_opts=-Xms2g -Xmx6g -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC -Dfile.encoding=ISO-8859-1
+jar.sha256=d5dd6b419850bdc64934fe6990b7ab4b5bbbf093aa623edc51b06b2238aab7a5
+jar.Main.class.bytecode=51
+UsageRecord.serialVersionUID(computed,serialver)=7311000903433512030L;
+TZ=Asia/Singapore LANG=C LC_ALL=C
+UMS_RUN_MODE=serial streams=MSC_SG MSC_ID PGW_SG SMSC_SG
+FAKE_GEN=2026-11-20 10:15:00
+FAKE_CYCLE1=2026-11-20 10:30:00
+FAKE_CYCLE2=2026-11-20 10:45:00

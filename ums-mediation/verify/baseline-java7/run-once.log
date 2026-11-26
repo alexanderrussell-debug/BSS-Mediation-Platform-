@@ -1,0 +1,140 @@
+### cycle stream MSC_SG
+2026-11-20 10:30:00,000 INFO  [main] Main - UMS Usage Mediation System 5.2 starting in run-once mode
+2026-11-20 10:30:00,000 INFO  [main] SubscriberCache - Loaded 20 subscribers from ./refdata/subscribers.csv
+2026-11-20 10:30:00,000 INFO  [main] RatingZoneTable - Loaded 30 rating prefixes (max length 6)
+2026-11-20 10:30:00,000 INFO  [main] RoamingPartnerTable - Loaded 10 PLMNs, 5 home networks
+2026-11-20 10:30:00,000 INFO  [main] DuplicateChecker - No dedup state at ./data/state/dedup.ser, starting empty
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2026-11-20 10:30:00,000 INFO  [main] StreamConfigLoader - Configured Stream[MSC_SG MSC_BER LOCAL ./data/input/MSC_SG tz=Asia/Singapore]
+2026-11-20 10:30:00,000 INFO  [ums-MSC_SG] LocalDirCollector - MSC_SG: collected 1 files
+2026-11-20 10:30:00,000 INFO  [ums-MSC_SG] StreamProcessor - MSC_SG: processing CDR_MSC_SG01_202611191000_0001.ber
+2026-11-20 10:30:00,000 INFO  [ums-MSC_SG] BillingUdrWriter - Wrote 8 records to UDR_MSC_SG_20261120103000_1.dat
+2026-11-20 10:30:00,000 INFO  [ums-MSC_SG] DwhCsvWriter - Wrote 9 records to DWH_MSC_SG_20261120103000_1.csv
+2026-11-20 10:30:00,000 INFO  [ums-MSC_SG] FraudFeedWriter - Wrote 2 records to FMS_MSC_SG_20261120103000_1.txt
+2026-11-20 10:30:00,000 INFO  [ums-MSC_SG] OcsReconWriter - Wrote 1 records to OCS_MSC_SG_20261120103000_1.txt
+2026-11-20 10:30:00,000 INFO  [ums-MSC_SG] RejectWriter - Wrote 2 records to REJ_MSC_SG_20261120103000_1.txt
+2026-11-20 10:30:00,000 INFO  [ums-MSC_SG] StreamProcessor - MSC_SG/CDR_MSC_SG01_202611191000_0001.ber in=16 rej=2 dup=1 filt=4 held=0 out=9 fraud=2 balanced=true status=OK
+2026-11-20 10:30:00,000 INFO  [main] MediationEngine - Cycle done: 1 files, in=16 out=9 rej=2 in 0ms
+### cycle stream MSC_ID
+2026-11-20 10:30:00,000 INFO  [main] Main - UMS Usage Mediation System 5.2 starting in run-once mode
+2026-11-20 10:30:00,000 INFO  [main] SubscriberCache - Loaded 20 subscribers from ./refdata/subscribers.csv
+2026-11-20 10:30:00,000 INFO  [main] RatingZoneTable - Loaded 30 rating prefixes (max length 6)
+2026-11-20 10:30:00,000 INFO  [main] RoamingPartnerTable - Loaded 10 PLMNs, 5 home networks
+2026-11-20 10:30:00,000 INFO  [main] DuplicateChecker - Loaded 14 dedup keys
+2026-11-20 10:30:00,000 INFO  [main] PartialCdrAggregator - Loaded 0 pending data sessions
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2026-11-20 10:30:00,000 INFO  [main] StreamConfigLoader - Configured Stream[MSC_ID MSC_BER LOCAL ./data/input/MSC_ID tz=Asia/Jakarta]
+2026-11-20 10:30:00,000 INFO  [ums-MSC_ID] LocalDirCollector - MSC_ID: collected 1 files
+2026-11-20 10:30:00,000 INFO  [ums-MSC_ID] StreamProcessor - MSC_ID: processing CDR_MSC_ID01_202611191000_0001.ber
+2026-11-20 10:30:00,000 INFO  [ums-MSC_ID] BillingUdrWriter - Wrote 4 records to UDR_MSC_ID_20261120093000_1.dat
+2026-11-20 10:30:00,000 INFO  [ums-MSC_ID] DwhCsvWriter - Wrote 5 records to DWH_MSC_ID_20261120093000_1.csv
+2026-11-20 10:30:00,000 INFO  [ums-MSC_ID] OcsReconWriter - Wrote 1 records to OCS_MSC_ID_20261120093000_1.txt
+2026-11-20 10:30:00,000 INFO  [ums-MSC_ID] StreamProcessor - MSC_ID/CDR_MSC_ID01_202611191000_0001.ber in=5 rej=0 dup=0 filt=0 held=0 out=5 fraud=0 balanced=true status=OK
+2026-11-20 10:30:00,000 INFO  [main] MediationEngine - Cycle done: 1 files, in=5 out=5 rej=0 in 0ms
+### cycle stream PGW_SG
+2026-11-20 10:30:00,000 INFO  [main] Main - UMS Usage Mediation System 5.2 starting in run-once mode
+2026-11-20 10:30:00,000 INFO  [main] SubscriberCache - Loaded 20 subscribers from ./refdata/subscribers.csv
+2026-11-20 10:30:00,000 INFO  [main] RatingZoneTable - Loaded 30 rating prefixes (max length 6)
+2026-11-20 10:30:00,000 INFO  [main] RoamingPartnerTable - Loaded 10 PLMNs, 5 home networks
+2026-11-20 10:30:00,000 INFO  [main] DuplicateChecker - Loaded 19 dedup keys
+2026-11-20 10:30:00,000 INFO  [main] PartialCdrAggregator - Loaded 0 pending data sessions
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2026-11-20 10:30:00,000 INFO  [main] StreamConfigLoader - Configured Stream[PGW_SG PGW_CSV LOCAL ./data/input/PGW_SG tz=Asia/Singapore]
+2026-11-20 10:30:00,000 INFO  [ums-PGW_SG] LocalDirCollector - PGW_SG: collected 2 files
+2026-11-20 10:30:00,000 INFO  [ums-PGW_SG] StreamProcessor - PGW_SG: processing PGW_SG01_202611191000_0001.csv
+2026-11-20 10:30:00,000 INFO  [ums-PGW_SG] BillingUdrWriter - Wrote 2 records to UDR_PGW_SG_20261120103000_1.dat
+2026-11-20 10:30:00,000 INFO  [ums-PGW_SG] DwhCsvWriter - Wrote 3 records to DWH_PGW_SG_20261120103000_1.csv
+2026-11-20 10:30:00,000 INFO  [ums-PGW_SG] FraudFeedWriter - Wrote 1 records to FMS_PGW_SG_20261120103000_1.txt
+2026-11-20 10:30:00,000 INFO  [ums-PGW_SG] OcsReconWriter - Wrote 1 records to OCS_PGW_SG_20261120103000_1.txt
+2026-11-20 10:30:00,000 INFO  [ums-PGW_SG] RejectWriter - Wrote 1 records to REJ_PGW_SG_20261120103000_1.txt
+2026-11-20 10:30:00,000 INFO  [ums-PGW_SG] StreamProcessor - PGW_SG/PGW_SG01_202611191000_0001.csv in=10 rej=1 dup=1 filt=1 held=4 out=3 fraud=1 balanced=true status=OK
+2026-11-20 10:30:00,000 INFO  [ums-PGW_SG] StreamProcessor - PGW_SG: processing PGW_SG01_202611191000_0002.csv
+2026-11-20 10:30:00,000 INFO  [ums-PGW_SG] BillingUdrWriter - Wrote 2 records to UDR_PGW_SG_20261120103000_2.dat
+2026-11-20 10:30:00,000 INFO  [ums-PGW_SG] DwhCsvWriter - Wrote 2 records to DWH_PGW_SG_20261120103000_2.csv
+2026-11-20 10:30:00,000 INFO  [ums-PGW_SG] StreamProcessor - PGW_SG/PGW_SG01_202611191000_0002.csv in=2 rej=0 dup=0 filt=0 held=0 out=2 fraud=0 balanced=true status=OK
+2026-11-20 10:30:00,000 INFO  [main] MediationEngine - Cycle done: 2 files, in=12 out=5 rej=1 in 0ms
+### cycle stream SMSC_SG
+2026-11-20 10:30:00,000 INFO  [main] Main - UMS Usage Mediation System 5.2 starting in run-once mode
+2026-11-20 10:30:00,000 INFO  [main] SubscriberCache - Loaded 20 subscribers from ./refdata/subscribers.csv
+2026-11-20 10:30:00,000 INFO  [main] RatingZoneTable - Loaded 30 rating prefixes (max length 6)
+2026-11-20 10:30:00,000 INFO  [main] RoamingPartnerTable - Loaded 10 PLMNs, 5 home networks
+2026-11-20 10:30:00,000 INFO  [main] DuplicateChecker - Loaded 29 dedup keys
+2026-11-20 10:30:00,000 INFO  [main] PartialCdrAggregator - Loaded 1 pending data sessions
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2026-11-20 10:30:00,000 INFO  [main] StreamConfigLoader - Configured Stream[SMSC_SG SMSC_PIPE LOCAL ./data/input/SMSC_SG tz=Asia/Singapore]
+2026-11-20 10:30:00,000 INFO  [ums-SMSC_SG] LocalDirCollector - SMSC_SG: collected 1 files
+2026-11-20 10:30:00,000 INFO  [ums-SMSC_SG] StreamProcessor - SMSC_SG: processing SMSC_SG01_202611191000_0001.txt
+2026-11-20 10:30:00,000 INFO  [ums-SMSC_SG] BillingUdrWriter - Wrote 3 records to UDR_SMSC_SG_20261120103000_1.dat
+2026-11-20 10:30:00,000 INFO  [ums-SMSC_SG] DwhCsvWriter - Wrote 4 records to DWH_SMSC_SG_20261120103000_1.csv
+2026-11-20 10:30:00,000 INFO  [ums-SMSC_SG] OcsReconWriter - Wrote 1 records to OCS_SMSC_SG_20261120103000_1.txt
+2026-11-20 10:30:00,000 INFO  [ums-SMSC_SG] RejectWriter - Wrote 1 records to REJ_SMSC_SG_20261120103000_1.txt
+2026-11-20 10:30:00,000 INFO  [ums-SMSC_SG] StreamProcessor - SMSC_SG/SMSC_SG01_202611191000_0001.txt in=9 rej=1 dup=2 filt=2 held=0 out=4 fraud=0 balanced=true status=OK
+2026-11-20 10:30:00,000 INFO  [main] MediationEngine - Cycle done: 1 files, in=9 out=4 rej=1 in 0ms
+### cycle stream MSC_SG
+2026-11-20 10:45:00,000 INFO  [main] Main - UMS Usage Mediation System 5.2 starting in run-once mode
+2026-11-20 10:45:00,000 INFO  [main] SubscriberCache - Loaded 20 subscribers from ./refdata/subscribers.csv
+2026-11-20 10:45:00,000 INFO  [main] RatingZoneTable - Loaded 30 rating prefixes (max length 6)
+2026-11-20 10:45:00,000 INFO  [main] RoamingPartnerTable - Loaded 10 PLMNs, 5 home networks
+2026-11-20 10:45:00,000 INFO  [main] DuplicateChecker - Loaded 35 dedup keys
+2026-11-20 10:45:00,000 INFO  [main] PartialCdrAggregator - Loaded 1 pending data sessions
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2026-11-20 10:45:00,000 INFO  [main] StreamConfigLoader - Configured Stream[MSC_SG MSC_BER LOCAL ./data/input/MSC_SG tz=Asia/Singapore]
+2026-11-20 10:45:00,000 INFO  [ums-MSC_SG] LocalDirCollector - MSC_SG: collected 1 files
+2026-11-20 10:45:00,000 INFO  [ums-MSC_SG] StreamProcessor - MSC_SG: processing CDR_MSC_SG01_202611191000_0001.ber
+2026-11-20 10:45:00,000 INFO  [ums-MSC_SG] RejectWriter - Wrote 1 records to REJ_MSC_SG_20261120104500_2.txt
+2026-11-20 10:45:00,000 INFO  [ums-MSC_SG] StreamProcessor - MSC_SG/CDR_MSC_SG01_202611191000_0001.ber in=16 rej=1 dup=15 filt=0 held=0 out=0 fraud=0 balanced=true status=OK
+2026-11-20 10:45:00,000 INFO  [main] MediationEngine - Cycle done: 1 files, in=16 out=0 rej=1 in 0ms
+### cycle stream MSC_ID
+2026-11-20 10:45:00,000 INFO  [main] Main - UMS Usage Mediation System 5.2 starting in run-once mode
+2026-11-20 10:45:00,000 INFO  [main] SubscriberCache - Loaded 20 subscribers from ./refdata/subscribers.csv
+2026-11-20 10:45:00,000 INFO  [main] RatingZoneTable - Loaded 30 rating prefixes (max length 6)
+2026-11-20 10:45:00,000 INFO  [main] RoamingPartnerTable - Loaded 10 PLMNs, 5 home networks
+2026-11-20 10:45:00,000 INFO  [main] DuplicateChecker - Loaded 35 dedup keys
+2026-11-20 10:45:00,000 INFO  [main] PartialCdrAggregator - Loaded 1 pending data sessions
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2026-11-20 10:45:00,000 INFO  [main] StreamConfigLoader - Configured Stream[MSC_ID MSC_BER LOCAL ./data/input/MSC_ID tz=Asia/Jakarta]
+2026-11-20 10:45:00,000 INFO  [ums-MSC_ID] LocalDirCollector - MSC_ID: collected 1 files
+2026-11-20 10:45:00,000 INFO  [ums-MSC_ID] StreamProcessor - MSC_ID: processing CDR_MSC_ID01_202611191000_0001.ber
+2026-11-20 10:45:00,000 INFO  [ums-MSC_ID] StreamProcessor - MSC_ID/CDR_MSC_ID01_202611191000_0001.ber in=5 rej=0 dup=5 filt=0 held=0 out=0 fraud=0 balanced=true status=OK
+2026-11-20 10:45:00,000 INFO  [main] MediationEngine - Cycle done: 1 files, in=5 out=0 rej=0 in 0ms
+### cycle stream PGW_SG
+2026-11-20 10:45:00,000 INFO  [main] Main - UMS Usage Mediation System 5.2 starting in run-once mode
+2026-11-20 10:45:00,000 INFO  [main] SubscriberCache - Loaded 20 subscribers from ./refdata/subscribers.csv
+2026-11-20 10:45:00,000 INFO  [main] RatingZoneTable - Loaded 30 rating prefixes (max length 6)
+2026-11-20 10:45:00,000 INFO  [main] RoamingPartnerTable - Loaded 10 PLMNs, 5 home networks
+2026-11-20 10:45:00,000 INFO  [main] DuplicateChecker - Loaded 35 dedup keys
+2026-11-20 10:45:00,000 INFO  [main] PartialCdrAggregator - Loaded 1 pending data sessions
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2026-11-20 10:45:00,000 INFO  [main] StreamConfigLoader - Configured Stream[PGW_SG PGW_CSV LOCAL ./data/input/PGW_SG tz=Asia/Singapore]
+2026-11-20 10:45:00,000 INFO  [ums-PGW_SG] LocalDirCollector - PGW_SG: collected 1 files
+2026-11-20 10:45:00,000 INFO  [ums-PGW_SG] StreamProcessor - PGW_SG: processing PGW_SG01_202611191000_0003.csv
+2026-11-20 10:45:00,000 INFO  [ums-PGW_SG] BillingUdrWriter - Wrote 1 records to UDR_PGW_SG_20261120104500_3.dat
+2026-11-20 10:45:00,000 INFO  [ums-PGW_SG] DwhCsvWriter - Wrote 1 records to DWH_PGW_SG_20261120104500_3.csv
+2026-11-20 10:45:00,000 INFO  [ums-PGW_SG] StreamProcessor - PGW_SG/PGW_SG01_202611191000_0003.csv in=1 rej=0 dup=0 filt=0 held=0 out=1 fraud=0 balanced=true status=OK
+2026-11-20 10:45:00,000 INFO  [main] MediationEngine - Cycle done: 1 files, in=1 out=1 rej=0 in 0ms
+### cycle stream SMSC_SG
+2026-11-20 10:45:00,000 INFO  [main] Main - UMS Usage Mediation System 5.2 starting in run-once mode
+2026-11-20 10:45:00,000 INFO  [main] SubscriberCache - Loaded 20 subscribers from ./refdata/subscribers.csv
+2026-11-20 10:45:00,000 INFO  [main] RatingZoneTable - Loaded 30 rating prefixes (max length 6)
+2026-11-20 10:45:00,000 INFO  [main] RoamingPartnerTable - Loaded 10 PLMNs, 5 home networks
+2026-11-20 10:45:00,000 INFO  [main] DuplicateChecker - Loaded 36 dedup keys
+2026-11-20 10:45:00,000 INFO  [main] PartialCdrAggregator - Loaded 0 pending data sessions
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2026-11-20 10:45:00,000 INFO  [main] StreamConfigLoader - Configured Stream[SMSC_SG SMSC_PIPE LOCAL ./data/input/SMSC_SG tz=Asia/Singapore]
+2026-11-20 10:45:00,000 INFO  [main] MediationEngine - Cycle done: 0 files, in=0 out=0 rej=0 in 0ms

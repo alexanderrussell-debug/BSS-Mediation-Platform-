@@ -1,0 +1,25 @@
+== UMS FTP collector test: jar commons-net 2.2, java 21.0.13.1, opts: -Xms2g -Xmx6g -Dfile.encoding=ISO-8859-1
+PASS  run-once exit 0
+PASS  UMS logged 'collected 1 files via FTP'
+PASS  server saw RETR /export/cdr/out/CDR_MSC_ID01_202611191000_0001.ber
+PASS  server saw DELE /export/cdr/out/CDR_MSC_ID01_202611191000_0001.ber
+PASS  remote CDR_MSC_ID01_202611191000_0001.ber deleted
+PASS  non-matching README.txt left on server
+PASS  sub-directory left on server
+PASS  downloaded file processed + archived
+PASS  work/ and input/ empty after cycle
+PASS  output billing/UDR_MSC_ID_20261120093000_1.dat identical to LOCAL-collector Java 7 baseline
+PASS  output dwh/DWH_MSC_ID_20261120093000_1.csv identical to LOCAL-collector Java 7 baseline
+PASS  output ocs/OCS_MSC_ID_20261120093000_1.txt identical to LOCAL-collector Java 7 baseline
+PASS  no extra MSC_ID output files
+PASS  seq_MSC_ID.txt identical to baseline
+PASS  control totals row identical to baseline
+PASS  empty poll: exit 0, 'collected 0 files via FTP'
+      (bad-password run-once exit code: 0)
+PASS  bad password: 'FTP login failed' logged, remote file kept
+--- ftpd commands seen:
+      1 DELE /tmp/f21/ftproot/export/cdr/out/CDR_MSC_ID01_202611191000_0001.ber
+      1 RETR /tmp/f21/ftproot/export/cdr/out/CDR_MSC_ID01_202611191000_0001.ber
+      3 USER 'umstest'
+      1 failed login
+== RESULT: PASS (17 PASS, 0 FAIL)  commons-net 2.2 on java 21.0.13.1  (logs: /tmp/f21)
