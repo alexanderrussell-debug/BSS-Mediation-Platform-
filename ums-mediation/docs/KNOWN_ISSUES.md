@@ -13,6 +13,6 @@ Tracked in JIRA project UMS. Listed here because Revenue Assurance and Ops keep 
 | RA-2024-031 | Revenue Assurance: billed data volume is ~0.4% below PGW interface counters, concentrated on heavy-usage postpaid plans | Under investigation |
 | RA-2025-007 | Customer complaints about Makassar call times on itemised bills being one hour off | Billing team adjusts on complaint |
 | SEC-2023-118 | Audit finding: FTP (not SFTP) to network elements, plain-text passwords in `ums.properties` and `smsc_pull.pl` | Risk accepted; network VLAN isolated |
-| SEC-2024-022 | Scan flags Log4j 1.x, Spring 3.2, Quartz 1.8, Commons Net 2.2 as end-of-life | Needs replatforming project |
-| UMS-500 | Build requires JDK 7/8 — the new Jenkins agents (JDK 17) cannot build UMS | Keep the old `bldsrv02` alive |
+| SEC-2024-022 | Scan flags Log4j 1.x, Spring 3.2, Quartz 1.8, Commons Net 2.2 as end-of-life | **Addressed by the JDK 21 migration (5.3.0):** reload4j 1.2.26, Spring 5.3.39, Quartz 2.3.2, Commons Net 3.11.1. Spring 5.3 OSS support ended 2024-08 — a Spring 6 / `jakarta.*` move is the follow-up. Re-scan to close |
+| UMS-500 | Build requires JDK 7/8 — the new Jenkins agents (JDK 17) cannot build UMS | **Fixed in 5.3.0:** builds with `<release>21</release>` on JDK 21 (Maven 3.9). Jenkins agents need JDK 21; `bldsrv02` can be retired after cutover. Ops must confirm JDK 21 support on the `ossmed01` OS (RHEL 6 is not a supported JDK 21 platform) |
 | UMS-512 | No HA, single VM. Outage > 12h loses SMSC records | DR plan is "restore VM from backup" |

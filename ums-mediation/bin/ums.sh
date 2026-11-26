@@ -2,11 +2,12 @@
 # UMS control script. Installed at /opt/ums/bin/ums.sh, run as user 'ums'.
 # Usage: ums.sh start|stop|status|run-once|gen-samples
 UMS_HOME=${UMS_HOME:-$(cd "$(dirname "$0")/.." && pwd)}
-JAVA=${JAVA_HOME:-/usr/java/jdk1.7.0_80}/bin/java
+JAVA=${JAVA_HOME:-/usr/lib/jvm/java-21-openjdk}/bin/java
 JAR=$UMS_HOME/lib/ums-mediation-5.2.1-jar-with-dependencies.jar
 [ -f $JAR ] || JAR=$UMS_HOME/target/ums-mediation-5.2.1-jar-with-dependencies.jar
 PIDFILE=$UMS_HOME/ums.pid
-JAVA_OPTS="-Xms2g -Xmx6g -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC -Dfile.encoding=ISO-8859-1"
+# JDK 21: PermGen (JDK 8) and CMS (JDK 14) are gone - G1. file.encoding must stay ISO-8859-1 (JDK 18+ defaults to UTF-8).
+JAVA_OPTS="-Xms2g -Xmx6g -XX:+UseG1GC -Dfile.encoding=ISO-8859-1"
 
 cd $UMS_HOME
 mkdir -p logs data
