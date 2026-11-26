@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  UMS wiring. Spring 3.2 XML (no annotations - team standard since 2011).
+  UMS wiring. Spring 5.3 XML (no annotations - team standard since 2011).
 -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- conf/ums.properties on the server overrides the one in the jar -->
     <bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -94,14 +94,17 @@
         <property name="streamProcessor" ref="streamProcessor"/>
     </bean>
 
-    <!-- ===================== Quartz 1.x schedule ===================== -->
+    <!-- ===================== Quartz 2.x schedule ===================== -->
+    <!-- JobDetail factory for Quartz 2.x. concurrent=false => @DisallowConcurrentExecution job:
+         a cycle that overruns 15 min is never started twice in parallel (same as Quartz 1.x StatefulJob). -->
     <bean id="mediationJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
         <property name="targetObject" ref="mediationEngine"/>
         <property name="targetMethod" value="runAll"/>
         <property name="concurrent" value="false"/>
     </bean>
 
-    <bean id="mediationTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+    <!-- Quartz 2.x: CronTriggerFactoryBean replaces the removed CronTriggerBean -->
+    <bean id="mediationTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
         <property name="jobDetail" ref="mediationJob"/>
         <property name="cronExpression" value="${ums.schedule.cron}"/>
     </bean>
@@ -111,5 +114,10 @@
             <list><ref bean="mediationTrigger"/></list>
         </property>
         <property name="autoStartup" value="${ums.scheduler.autoStart}"/>
+        <property name="quartzProperties">
+            <props>
+                <prop key="org.quartz.scheduler.skipUpdateCheck">true</prop>
+            </props>
+        </property>
     </bean>
 </beans>

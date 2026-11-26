@@ -20,16 +20,16 @@ In production since 2011 (Singapore). Indonesia was added in 2016.
 
 | Layer | Technology |
 |---|---|
-| Language | Java 7 (source/target 1.7) |
-| Framework | Spring Framework 3.2 — XML bean wiring |
-| Scheduling | Quartz 1.8 via Spring `CronTriggerBean` |
-| Collection | Local directory pickup, Commons Net 2.2 FTP, a Perl script for the SMSC |
+| Language | Java 21 (`maven.compiler.release` 21; source encoding ISO-8859-1) |
+| Framework | Spring Framework 5.3 (`javax.*`) — XML bean wiring |
+| Scheduling | Quartz 2.3 via Spring `CronTriggerFactoryBean` / `SchedulerFactoryBean` (RAM job store, non-concurrent job) |
+| Collection | Local directory pickup, Commons Net 3.11 FTP, a Perl script for the SMSC |
 | Decoding | Hand-written ASN.1 BER reader (MSC), CSV (PGW), pipe-delimited (SMSC) |
 | State | Java serialization (`.ser` files) for duplicate keys and pending partial CDRs |
 | Reference data | CSV extracts from BSS, loaded at startup |
-| Logging | Log4j 1.2 |
-| Tests | JUnit 4.10 |
-| Build / run | Maven (legacy Ant `build.xml` still in the repo), fat JAR run by `bin/ums.sh` on RHEL 6 |
+| Logging | reload4j 1.2.26 (drop-in Log4j 1.2 API, same `log4j.properties`); Quartz/Spring log through SLF4J → reload4j |
+| Tests | JUnit 4.13.2 |
+| Build / run | Maven 3.9 on JDK 21 (legacy Ant build archived in `docs/archive/build.xml`), fat JAR run by `bin/ums.sh` |
 
 ## How it works
 
@@ -47,21 +47,23 @@ Every 15 minutes Quartz triggers a cycle; each stream runs in its own thread. Se
 
 ## Building
 
-Requires **JDK 7 or 8** and Maven 3.
+Requires **JDK 21** and Maven 3.6.3+ (3.9.x recommended).
 
 ```bash
 mvn clean package
 ```
 
-Produces `target/ums-mediation-5.2.1-jar-with-dependencies.jar`. Does **not** build on JDK 11+.
+Runs the JUnit tests and produces `target/ums-mediation-5.2.1-jar-with-dependencies.jar`. JDK 7/8 can no longer
+build UMS. The fat jar is assembled from `src/assembly/jar-with-dependencies.xml`, which merges
+`META-INF/spring.handlers` / `spring.schemas` so the Spring XML config resolves offline from inside the jar.
 
 ## Running locally
 
 ### Option A — Docker (easiest)
 
 ```bash
-docker build -t ums:legacy .
-docker run --rm ums:legacy
+docker build -t ums:jdk21 .
+docker run --rm ums:jdk21
 ```
 
 Generates a set of sample network files, runs one mediation cycle and prints the control totals and the
@@ -76,7 +78,13 @@ bin/ums.sh run-once        # one cycle, then exit
 bin/ums.sh start           # daemon with the 15-minute schedule
 ```
 
-Set `JAVA_HOME` to a JDK 7/8 install first.
+Set `JAVA_HOME` to a JDK 21 install first (default in `bin/ums.sh`: `/usr/lib/jvm/java-21-openjdk`).
+`bin/ums.sh` runs with `-Xms2g -Xmx6g -XX:+UseG1GC -Dfile.encoding=ISO-8859-1`; keep the encoding flag — JDK 18+
+defaults to UTF-8 and the CDR decoders/writers rely on ISO-8859-1. The `start`/`stop`/`status` interface and the
+`ums.pid` file are unchanged (the nightly cron restart depends on them).
+
+To test the schedule without waiting 15 minutes, override the cron in `conf/ums.properties`
+(e.g. `ums.schedule.cron=0/5 * * * * ?`) and run `bin/ums.sh start`.
 
 ### Where things land
 
