@@ -68,4 +68,9 @@ Indonesian subscriber calling `62…` has zone `INTL_ASEAN` but is rated domesti
 | `state/pending.ser` | `HashMap` charging id → partial records |
 | `state/seq_<STREAM>.txt` | Last output file sequence number |
 
-If a `.ser` file can't be read (e.g. after a class change), UMS starts with empty state — see KNOWN_ISSUES.
+If a `.ser` file exists but can't be read (corrupt, truncated, or a class change — UMS-412), UMS logs
+`UMS-STATE-LOAD-FAILURE` and refuses to start instead of starting empty; the file is left untouched. To start
+empty on purpose, move the file aside or set `-Dums.state.allowEmptyOnLoadFailure=true` (the file is then
+renamed to `<name>.unreadable-<timestamp>`). State is saved via a temp file and rename. `tools.StateFileTool check`
+inspects the state directory read-only. JDK 7 and Java 21 builds read each other's state files — see
+`docs/JAVA21_CUTOVER.md`.
